@@ -40,3 +40,9 @@ if (n) {
 } else {
     console.log("no variable")
 } // logs "no variable"
+
+
+//ternary operator
+
+console.log(true ? 'true' : 'false')  // logs true
+console.log(false ? 'true' : 'false') // logs false

@@ -1,4 +1,14 @@
-const num = 100 // assignment
+console.log(100 == "100") // logs 'true'
+console.log(100 === "100") // logs 'false'
+console.log(100 > 10) // logs 'true'
+console.log(100 <= 100) // logs 'true'
+console.log(true && false) // logs 'false'
+console.log(true || false) // logs 'true'
+
+
+
+
+
 
 // == is for unstrict comparison, will resolve truthy if the values are the same regardless of type
 if (100 == "100") {

@@ -1,3 +1,13 @@
+//generic version:
+
+// for (let i = value, condition, iteration) {
+//     //do something
+// }
+
+// 'value' is the initial value of 'i'. 
+// 'condition' is the condition upon which the loop continues to iterate
+// 'iteration' is code executed at the end of each iteration, commonly used to increment i.
+
 for (let i = 0; i < 10; i++) {
     console.log(i)
 } // logs numbers 0-9
