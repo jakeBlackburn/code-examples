@@ -28,6 +28,13 @@
         <span id="throttle"></span>
     </div>
 
+<!-- bubbling and capturing refer to the order of event handlers firing when the same event triggers callbacks on both parent and child elements. 
+the most basic example would be a click event bound to both a parent and child element
+when the child is clicked, the parent is also clicked, so which click event fires first?
+by default the child fires first, but the event listener can take an optional third argument after the event name and callbacks
+this is the useCapture argument, which is a boolean. When useCapture is false, which it is by default, bubbling is used, 
+meaning the child fires before the parent. Then it is true, capturing is used, meaning the parent fires before the child. 
+the examples below will illustrate this by logging the order of click events on child, parent, and grandparent elements. -->
 
 
     <h1>Bubbling vs Capturing</h1>
