@@ -3,11 +3,11 @@
 // this function will asynchronously wait for the delay to be over, continue to run the rest of the JS,
 // and fire the callback when the delay is finished
 function getData(callback, delay) {
-    setTimeout(callback('data'), delay)
+    setTimeout(callback(), delay)
 }
 
 // passes a callback to the getData function, which console logs the data after the delay of 1000ms
-getData((data) => console.log(data), 1000)
+getData(() => console.log('data'), 1000)
 
 // a real world example of a callback would be sending a request to a server, then firing some callback to handle
 // the response when it comes back
@@ -18,7 +18,7 @@ getData((data) => console.log(data), 1000)
 // this function returns a promise with the same asynchronous functionality (getData) as before
 function promissoryFunction() {
     return new Promise((resolve, reject) => { 
-        getData(resolve, 1000) // resolve is the equivalent to the callback functionality
+        setTimeout(resolve, 1000) // resolve is the equivalent to the callback functionality
     })
 } 
 
@@ -26,8 +26,10 @@ function promissoryFunction() {
 promise = promissoryFunction()
 
 // we then specify the resolve functionality with .then
-promise.then((data) => {
-    console.log(data)
+promise.then(() => {
+    console.log('data')
+}).catch((err) => {
+    console.log(err)
 })
 
 // this might seem like an extra step to do the same thing as before, but this is a very simple example.
